@@ -499,8 +499,6 @@ static void _setBreakpoint(struct GDBStub* stub, const char* message) {
 
 	switch (message[0]) {
 	case '0':
-		ARMDebuggerSetSoftwareBreakpoint(stub->d.platform, address, kind == 2 ? MODE_THUMB : MODE_ARM);
-		break;
 	case '1':
 		stub->d.platform->setBreakpoint(stub->d.platform, &breakpoint);
 		break;
