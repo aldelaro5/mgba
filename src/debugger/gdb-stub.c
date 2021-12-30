@@ -503,7 +503,7 @@ static void _setBreakpoint(struct GDBStub* stub, const char* message) {
 		stub->d.platform->setBreakpoint(stub->d.platform, &breakpoint);
 		break;
 	case '2':
-		watchpoint.type = WATCHPOINT_WRITE_CHANGE;
+		watchpoint.type = WATCHPOINT_WRITE;
 		stub->d.platform->setWatchpoint(stub->d.platform, &watchpoint);
 		break;
 	case '3':
